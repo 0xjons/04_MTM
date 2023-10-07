@@ -1,0 +1,185 @@
+{
+	"compiler": {
+		"version": "0.8.21+commit.d9974bed"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_hospitalTaskManager",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "activateStaff",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "staffAddress",
+						"type": "address"
+					}
+				],
+				"name": "addStaff",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "requester",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "patientName",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "roomFrom",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "roomTo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "bedNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "priority",
+						"type": "uint256"
+					}
+				],
+				"name": "assignTaskToCaretaker",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "deactivateStaff",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "hospitalTaskManager",
+				"outputs": [
+					{
+						"internalType": "contract IHospitalTaskManager",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "staffAddress",
+						"type": "address"
+					}
+				],
+				"name": "removeStaff",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "staffMembers",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "isAuthorized",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "isActive",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/MedicalStaff.sol": "MedicalStaff"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/MedicalStaff.sol": {
+			"keccak256": "0x62ac0edd51c3e151bfd2a8edc71573702e38d6305094ae1e85629b2fc02e83b4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://94e0ec269c862f0ffbb4c2295ae1f5cc396ec15ada13ff258146cd548427f199",
+				"dweb:/ipfs/QmU1WabkAuDLjNN4JCnfggKbnBSQT2HyCfKfmdf328RTsz"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,3 +1,4 @@
+// MedicalStaff.sol
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.21;
 
@@ -19,13 +20,13 @@ contract MedicalStaff {
     struct Staff {
         bool isAuthorized;
         bool isActive;
+        uint priority; // Nuevo campo para la prioridad del personal
     }
 
     mapping(address => Staff) public staffMembers;
 
-    constructor(address _hospitalTaskManager) {
+    constructor() {
         owner = msg.sender;
-        hospitalTaskManager = IHospitalTaskManager(_hospitalTaskManager);
     }
 
     modifier onlyOwner() {
@@ -33,8 +34,8 @@ contract MedicalStaff {
         _;
     }
 
-    function addStaff(address staffAddress) public onlyOwner {
-        staffMembers[staffAddress] = Staff(true, true);
+    function addStaff(address staffAddress, uint _priority) public onlyOwner {
+        staffMembers[staffAddress] = Staff(true, true, _priority);
     }
 
     function removeStaff(address staffAddress) public onlyOwner {
@@ -51,6 +52,10 @@ contract MedicalStaff {
         staffMembers[msg.sender].isActive = false;
     }
 
+    function getStaffPriority(address staffAddress) public view returns (uint) {
+        return staffMembers[staffAddress].priority;
+    }
+
     function assignTaskToCaretaker(
         address requester,
         bytes32 patientName,
@@ -62,4 +67,10 @@ contract MedicalStaff {
         require(staffMembers[msg.sender].isAuthorized && staffMembers[msg.sender].isActive, "Not authorized or not active");
         hospitalTaskManager.assignTask(requester, patientName, roomFrom, roomTo, bedNumber, priority);
     }
+
+    function setHospitalTaskManager(address _hospitalTaskManager) public onlyOwner {
+    hospitalTaskManager = IHospitalTaskManager(_hospitalTaskManager);
 }
+
+}
+

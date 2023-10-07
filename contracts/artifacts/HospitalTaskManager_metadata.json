@@ -11,6 +11,11 @@
 						"internalType": "address",
 						"name": "_taskPriorityHeap",
 						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_medicalStaffAddress",
+						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -225,6 +230,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "medicalStaffContract",
+				"outputs": [
+					{
+						"internalType": "contract MedicalStaff",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -404,11 +422,19 @@
 	},
 	"sources": {
 		"contracts/HospitalTaskManager.sol": {
-			"keccak256": "0x2203cfb420304c23929b5df9fba7f4f2d17a524a9beed73e0d857dedc06073a1",
+			"keccak256": "0x02a081d5ff1c75fe2b16f90c67693f5934b0d0869e2036c7f6a62107eea7422d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b2e733efc50c6a87fdfd997612c72a1585cafa4ef6afd520c2997f97c8375cea",
-				"dweb:/ipfs/QmYQrsz9erKztx9cRgs54CCejXMEEYKxDkJWWVN1JBg7Ae"
+				"bzz-raw://712d8bb228aba8b55afd25ba0011702bfeaa2cf42f82846a961f3896a03cb22a",
+				"dweb:/ipfs/QmfAcTxcv69PzkBYLjaujhrRXccSVMDENjPop3tpnMXX2P"
+			]
+		},
+		"contracts/MedicalStaff.sol": {
+			"keccak256": "0x9e905c3dd2609e614623f0ec42cd750e813f4bc4e0f120152450e21801d3765d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ddf2ed74908de685f58be539f82acc09fe73788ec6660f495b8c264d2a90592b",
+				"dweb:/ipfs/QmfLohGoPsL4TXDFredQcRLduxwYNSak9fBH41VLgKyd9g"
 			]
 		},
 		"contracts/PriorityHeap.sol": {

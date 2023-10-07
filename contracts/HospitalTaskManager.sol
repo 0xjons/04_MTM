@@ -1,16 +1,20 @@
+// HospitalTaskManager.sol
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.21;
 
 import "./PriorityHeap.sol";
+import "./MedicalStaff.sol"; // Importar el contrato MedicalStaff
 
 contract HospitalTaskManager {
     address public owner;
-    address public medicalStaffAddress; // Dirección del contrato MedicalStaff
+    address public medicalStaffAddress;
     PriorityHeap public taskPriorityHeap;
+    MedicalStaff public medicalStaffContract; // Variable para el contrato MedicalStaff
 
-    constructor(address _taskPriorityHeap) {
+    constructor(address _taskPriorityHeap, address _medicalStaffAddress) {
         owner = msg.sender;
         taskPriorityHeap = PriorityHeap(_taskPriorityHeap);
+        medicalStaffContract = MedicalStaff(_medicalStaffAddress); // Inicializar la variable con la dirección del contrato MedicalStaff
     }
 
     struct Caretaker {

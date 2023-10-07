@@ -6,13 +6,7 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_hospitalTaskManager",
-						"type": "address"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -29,6 +23,11 @@
 						"internalType": "address",
 						"name": "staffAddress",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_priority",
+						"type": "uint256"
 					}
 				],
 				"name": "addStaff",
@@ -82,6 +81,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "staffAddress",
+						"type": "address"
+					}
+				],
+				"name": "getStaffPriority",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "hospitalTaskManager",
 				"outputs": [
@@ -124,6 +142,19 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "_hospitalTaskManager",
+						"type": "address"
+					}
+				],
+				"name": "setHospitalTaskManager",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "",
 						"type": "address"
 					}
@@ -139,6 +170,11 @@
 						"internalType": "bool",
 						"name": "isActive",
 						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "priority",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -173,11 +209,11 @@
 	},
 	"sources": {
 		"contracts/MedicalStaff.sol": {
-			"keccak256": "0x62ac0edd51c3e151bfd2a8edc71573702e38d6305094ae1e85629b2fc02e83b4",
+			"keccak256": "0x9e905c3dd2609e614623f0ec42cd750e813f4bc4e0f120152450e21801d3765d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://94e0ec269c862f0ffbb4c2295ae1f5cc396ec15ada13ff258146cd548427f199",
-				"dweb:/ipfs/QmU1WabkAuDLjNN4JCnfggKbnBSQT2HyCfKfmdf328RTsz"
+				"bzz-raw://ddf2ed74908de685f58be539f82acc09fe73788ec6660f495b8c264d2a90592b",
+				"dweb:/ipfs/QmfLohGoPsL4TXDFredQcRLduxwYNSak9fBH41VLgKyd9g"
 			]
 		}
 	},
